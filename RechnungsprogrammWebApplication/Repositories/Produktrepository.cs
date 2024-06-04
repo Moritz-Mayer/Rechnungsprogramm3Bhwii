@@ -27,16 +27,17 @@ public class Produktrepository
         List<Produkt> produkts = new List<Produkt>();
         while (reader.Read())
         {
+        //Datensätze in Objekte umwandeln 
             Produkt newProdukt = new Produkt();
             newProdukt.produktId = (int)reader["produktId"];
-            newProdukt.breite = (int)reader["produktId"];
-            newProdukt.normpreis = (double)reader["produktId"];
-            newProdukt.hoehe = (int)reader["produktId"];
-            newProdukt.name = (string)reader["produktId"];
-            newProdukt.laenge = (int)reader["produktId"];
-
+            newProdukt.name = (string)reader["name"];
+            newProdukt.laenge = (double)reader["laenge"];
+            newProdukt.breite = (double)reader["breite"];
+            newProdukt.hoehe = (double)reader["hoehe"];
+            newProdukt.normpreis = (double)reader["normalpreis"];
+            
+            produkts.Add(newProdukt);
         }
-        //Datensätze in Objekte umwandeln 
         //mit Return zurückfügen
         myConnection.Close();
         return new List<Produkt>();
@@ -49,7 +50,7 @@ public class Produktrepository
 
     public void DeleteProdukt (int produktId)
     {
-        
+            
     }
 
     public void UpdateProdukt(Produkt produkt)
