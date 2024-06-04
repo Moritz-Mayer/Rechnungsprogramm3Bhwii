@@ -40,7 +40,7 @@ public class Produktrepository
         }
         //mit Return zurückfügen
         myConnection.Close();
-        return new List<Produkt>();
+        return produkts;
     }
 
     public void CreateProdukt(Produkt produkt)
