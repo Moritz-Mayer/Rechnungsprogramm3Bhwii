@@ -3,38 +3,5 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h1>Das sind meine Produkte</h1>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Laenge</th>
-        <th>Breite</th>
-        <th>hoehe</th>
-        <th>Normalpreis</th>
-        
-
-    </tr>
-    </thead>
-    <tbody>
-    @{
-        foreach (var produkt in Model)
-        {
-            
-        <tr>
-            <td>@(produkt.produktId)</td>
-            <td>@(produkt.name)</td>
-            <td>@(produkt.laenge)</td>
-            <td>@(produkt.breite)</td>
-            <td>@(produkt.hoehe)</td>
-            <td>@(produkt.normpreis)</td>
-            
-            
-        </tr>
-        }
-        
-    }
-    </tbody>
-</table>
+<h1>Willkommen zum Rechnungsprogramm</h1>

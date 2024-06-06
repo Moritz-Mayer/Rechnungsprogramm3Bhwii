@@ -16,10 +16,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        Produktrepository repo = new Produktrepository();
-        List<Produkt> myProdukts = repo.GetAllProdukte();
         
-        return View(myProdukts);
+        return View();
     }
 
     public IActionResult Privacy()
