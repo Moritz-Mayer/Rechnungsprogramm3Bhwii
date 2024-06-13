@@ -19,4 +19,15 @@ public class ProduktController : Controller
     {
         return View();
     }
+    [HttpPost]
+    public IActionResult SaveProdukt(Produkt produkt)
+    {
+        //Repository hohlen 
+        Produktrepository repo = new Produktrepository();
+
+        //Produkt speichern 
+        repo.CreateProdukt(produkt);
+        //zurück zur übersicht
+        return Redirect(url: "/Produkt");
+    }
 }

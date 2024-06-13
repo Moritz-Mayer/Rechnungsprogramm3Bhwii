@@ -45,7 +45,19 @@ public class Produktrepository
 
     public void CreateProdukt(Produkt produkt)
     {
+        NpgsqlConnection myConnection = ConnectToDB();
         
+        using NpgsqlCommand cmd = new NpgsqlCommand(
+            "INSERT INTO produkt (name, normalpreis, laenge, breite, hoehe) VALUES (:v1, :v2, :v3, :v4, :v5)", myConnection);
+        cmd.Parameters.AddWithValue("v1", produkt.name);
+        cmd.Parameters.AddWithValue("v2", produkt.laenge);
+        cmd.Parameters.AddWithValue("v3", produkt.breite);
+        cmd.Parameters.AddWithValue("v4", produkt.hoehe);
+        cmd.Parameters.AddWithValue("v5", produkt.normpreis);
+
+
+        int rowsAffected = cmd.ExecuteNonQuery();
+        myConnection.Close();
     }
 
     public void DeleteProdukt (int produktId)

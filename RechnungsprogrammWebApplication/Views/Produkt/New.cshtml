@@ -6,8 +6,9 @@
 
 <h1>Neues Produkt erstellen</h1>
 
-
-<table>
+<form action="Produkt/SaveProdukt" method="post">
+    
+<table class="table">
     <thead>
     <tr>
         <td>Bezeichnung</td>
@@ -16,34 +17,34 @@
     </thead>
     <tbody>
     <tr>
-        <td>Titel</td>
+        <td>Name</td>
         <td> <input type = "text" id = "name" name="name"></td>
     </tr>
     <tr>
-        <td> Titel</td>
+        <td> Länge</td>
         <td> <input type = "number" id = "laenge" name="laenge"></td>
     </tr>
     <tr>
-        <td> Titel</td>
+        <td> Breite</td>
         <td> <input type = "number" id = "breite" name="breite"></td>
     </tr>
     <tr>
-        <td> Titel</td>
+        <td> Höhe</td>
         <td> <input type = "number" id = "hoehe" name="hoehe"></td>
     </tr>
     <tr>
-        <td> Titel</td>
+        <td> Preis</td>
         <td> <input type = "number" id = "normpreis" name="normpreis"></td>
     </tr>
     <tr>
-            <td>Titel </td>
-            <td>
-                <a href="/Burger">Abbrechen</a>
-            </td>
-            <td>
-                <button>Speichern</button>
-            </td>
+        <td>
+            <a href="/Produkt" class="btn btn-danger">Abbrechen</a>
+        </td>
+        <td>
+            <button class="btn btn-success" type="submit"> Speichern</button>
+        </td>
     </tr>
     
     </tbody>
 </table>
+</form>
